@@ -3,6 +3,7 @@ import { StyleSheet} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeScreen from '../screens/HomeScreen'
 import CartScreen from '../screens/CartScreen'
+import FulldomeProScreen from '../screens/FulldomeProScreen'
 import FavouritesScreen from '../screens/FavouritesScreen'
 import OrderHistoryScreen from '../screens/OrderHistoryScreen'
 import CustomIcon from '../components/CustomIcon'
@@ -31,6 +32,11 @@ const TabNavigator = () => {
         <Tab.Screen name="Cart" component={CartScreen} options = {{
             tabBarIcon:({focused,color,size}) => (
                 <CustomIcon name="cart" size={25} color={focused?COLORS.primaryOrangeHex:COLORS.primaryLightGreyHex}></CustomIcon>
+            )
+        }}></Tab.Screen>
+        <Tab.Screen name="Fulldome" component={FulldomeProScreen} options = {{
+            tabBarIcon:({focused,color,size}) => (
+                <CustomIcon name="like" size={40} color={focused?COLORS.primaryOrangeHex:COLORS.primaryLightGreyHex}></CustomIcon>
             )
         }}></Tab.Screen>
         <Tab.Screen name="Favourites" component={FavouritesScreen} options = {{
